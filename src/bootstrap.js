@@ -4,7 +4,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 import App from './components/app';
-import AddBook from "./components/addBook"
+import AddBook from "./components/addBook";
+import DeleteLanding from "./components/deleteLanding";
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
@@ -25,6 +26,7 @@ function main() {
             <div className="">
                 <Route exact path="/" component={App}/>
                 <Route path="/add_book" component={AddBook}/>
+                <Route path="/deleted_book" component={DeleteLanding} />
             </div>
         </div>
       </BrowserRouter>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DeleteAction from "./deleteAction"
 
 export default class BookIndex extends Component {
     constructor(props) {
@@ -32,6 +33,7 @@ export default class BookIndex extends Component {
                     <div key={book[0]}>
                         <h2>Book Title: {book[1]}</h2>
                         <h3>Author: {book[2]}</h3>
+                        <DeleteAction id={book[0]}/>
                     </div>
                 ))}
             </div>
